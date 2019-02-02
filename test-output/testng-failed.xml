@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Loan Department]">
+  <parameter name="URL" value="www.facebook.com"/>
+  <test thread-count="5" name="Personal Loan(failed)">
+    <parameter name="URL" value="www.cricinfo.com"/>
+    <classes>
+      <class name="dm.day3">
+        <methods>
+          <include name="Day3Test4"/>
+          <include name="Day3Test1"/>
+        </methods>
+      </class> <!-- dm.day3 -->
+    </classes>
+  </test> <!-- Personal Loan(failed) -->
+</suite> <!-- Failed suite [Loan Department] -->

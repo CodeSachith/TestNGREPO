@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Department">
+<listeners>
+<listener class-name = "dm.Listners"/>
+</listeners>
+
+<parameter name = "URL" value = "www.facebook.com" />
+
+  <test thread-count="5" name="Personal Loan">
+  <parameter name = "URL" value = "www.cricinfo.com" />
+   <parameter name = "uname" value = "www.mit.com" />
+    <classes>
+      <class name="dm.day1"/>
+      <class name="dm.day2"/>
+      <class name="dm.day3"/>
+    </classes>
+  </test> 
+  
+  <test thread-count="5" name="Home Loan">
+  <parameter name = "URL" value = "www.ucsc.com" />
+ 
+    <classes>
+      <class name="dm.day3">
+      	<methods>
+      		<exclude name="Day3Test3"/>
+      	</methods>
+      </class>    
+      <class name="dm.day4">
+      	<methods>
+      		<include name="Mo.*"/>
+      	</methods>
+      </class>
+      <class name="dm.day5"/>
+      <class name="dm.day6"/>
+      <class name="dm.day7"/>
+    </classes>
+  </test>
+  
+</suite> 
